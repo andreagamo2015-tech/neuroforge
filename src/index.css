@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-night-950: #050814;
+  --color-night-900: #070b1a;
+  --color-night-850: #0a1024;
+  --color-night-800: #0e1530;
+  --color-night-700: #151f45;
+  --color-night-600: #1f2b5c;
+  --color-night-500: #2c3a73;
+  --color-ink: #e6ebf5;
+  --color-muted: #9aa6c4;
+  --color-faint: #6b7799;
+  --color-cyan: #22d3ee;
+  --color-cyan-soft: #67e8f9;
+  --color-violet: #a78bfa;
+  --color-violet-deep: #7c3aed;
+  --color-amber: #fbbf24;
+  --color-rose: #fb7185;
+  --color-ok: #34d399;
+  --color-bad: #f87171;
+  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--color-night-900);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(124, 58, 237, 0.12), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(34, 211, 238, 0.07), transparent 60%),
+    var(--color-night-900);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(21, 31, 69, 0.55), rgba(14, 21, 48, 0.75));
+  border: 1px solid var(--color-night-600);
+  border-radius: 16px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not(.force-motion) *,
+  html:not(.force-motion) *::before,
+  html:not(.force-motion) *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+input[type='range'] {
+  accent-color: var(--color-cyan);
+}

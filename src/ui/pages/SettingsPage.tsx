@@ -6,6 +6,7 @@ import { exportJSON, toCSV, validateImport } from '../../data/db';
 import { useStore } from '../../data/store';
 import { Button, Card, Field, Modal, PageTitle, Segmented, inputCls } from '../components/ui';
 import { navigate } from '../hooks';
+import { InstallButton } from '../components/InstallButton';
 
 function download(name: string, content: string, type: string) {
   const blob = new Blob([content], { type });
@@ -56,6 +57,7 @@ export function SettingsPage() {
             <Field label="Reducir animaciones"><Segmented label="Animaciones" value={settings.reducedMotion} onChange={(v) => void store.saveSettings({ reducedMotion: v })} options={[{ value: 'sistema', label: 'Según el sistema' }, { value: 'sí', label: 'Sí' }, { value: 'no', label: 'No' }]} /></Field>
             <Toggle label="Modo desarrollo (inspeccionar el motor adaptativo)" checked={settings.devMode} onChange={(v) => void store.saveSettings({ devMode: v })} />
             {settings.devMode && <Button onClick={() => navigate('/desarrollo')}>Abrir modo desarrollo</Button>}
+            <div className="border-t border-night-700 pt-3"><InstallButton /></div>
           </div>
         </Card>
         <Card title="Objetivos (relevancia por módulo)" subtitle="Peso de cada módulo en la selección de ejercicios: 0 = no priorizar, 1 = normal, 2 = máxima prioridad.">

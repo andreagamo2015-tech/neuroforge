@@ -21,6 +21,7 @@ Laboratorio personal de entrenamiento cognitivo con medición honesta. Funciona 
 | Medición | 4 paneles (dominio, generalización, transferencia, evaluación externa), perfil observado vs. estimación latente, comparación entre periodos, «evidencia insuficiente» |
 | Experimentos | Protocolo ABBA predefinido, pre/post a nivel fijo, retención, variante nueva, advertencias |
 | Datos | IndexedDB local, exportación JSON/CSV, importación, borrado total |
+| App instalable | PWA: icono propio, pantalla completa y funcionamiento sin conexión (service worker generado en cada compilación) |
 | Otros | Diario, modo concentración, sonidos opcionales, teclado, móvil, reducción de animaciones, modo desarrollo |
 
 La metodología completa está en [`METODOLOGIA.md`](METODOLOGIA.md) y en la página *Metodología* de la aplicación.
@@ -68,6 +69,15 @@ El resultado de `npm run build` es un sitio estático (`dist/`, ~140 KB comprimi
 Los límites cambian con el tiempo: consulta la página de precios de cada servicio antes de decidir.
 
 **Importante:** los datos viven en el navegador de cada persona. Cambiar de dominio, de navegador o borrar los datos del sitio implica empezar de cero; usa *Ajustes → Exportar* para conservar una copia.
+
+## Instalar como app
+
+Abre la web y pulsa **«Instalar app»** (menú lateral o *Ajustes*):
+
+- **Chrome / Edge (ordenador) y Android:** aparece el diálogo de instalación del navegador.
+- **iPhone / iPad:** en Safari, *Compartir → Añadir a pantalla de inicio*.
+
+Instalada se abre a pantalla completa y funciona sin conexión. Cada versión nueva publicada se descarga sola la próxima vez que se abra con internet.
 
 ## Privacidad
 

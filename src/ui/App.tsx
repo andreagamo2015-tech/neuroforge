@@ -17,6 +17,7 @@ import { SettingsPage } from './pages/SettingsPage';
 import { DevPage } from './pages/DevPage';
 import { MethodologyPage } from './pages/MethodologyPage';
 import { Onboarding } from './pages/Onboarding';
+import { InstallButton } from './components/InstallButton';
 
 const NAV: { path: string; label: string; icon: string; dev?: boolean }[] = [
   { path: '/', label: 'Inicio', icon: '◈' },
@@ -95,7 +96,8 @@ export function App() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-[11px] leading-relaxed text-faint">Datos guardados solo en este navegador. Sin cuentas, sin servidores, sin rankings.</p>
+            <InstallButton className="mt-6 w-full" />
+            <p className="mt-4 text-[11px] leading-relaxed text-faint">Datos guardados solo en este navegador. Sin cuentas, sin servidores, sin rankings.</p>
           </nav>
           {menu && <div className="fixed inset-0 z-30 bg-night-950/60 lg:hidden" onClick={() => setMenu(false)} />}
         </>

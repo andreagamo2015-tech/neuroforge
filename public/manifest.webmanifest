@@ -1,0 +1,18 @@
+{
+  "name": "NEUROFORGE X",
+  "short_name": "NeuroForge",
+  "description": "Laboratorio personal de entrenamiento cognitivo con medición honesta de dominio, generalización y transferencia.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070b1a",
+  "theme_color": "#070b1a",
+  "categories": ["education", "health", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
